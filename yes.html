@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>vamoss</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
     <style>
         body {
             background-color: black;
@@ -42,6 +45,7 @@
 
         /* Style for the bottom fixed container */
         .bottom-container {
+            display: none;
             position: fixed;
             bottom: 0;
             right: 0;
@@ -49,40 +53,37 @@
         }
     </style>
 </head>
+
 <body class="d-flex flex-column justify-content-between">
     <div class="container mt-4 pt-4 flex-grow-1">
         <div class="text-center">
-            <h1>Happy 20th Birthday <span style="color: darkblue;">&#x1F499;</h1>
+            <h1>Happy 20th Birthday <span style="color: darkblue;">&#x1F499;</span></h1>
 
             <!-- Box for the paragraphs -->
             <div class="paragraph-container">
-<p>Hey there! It's been a while, and I hope life is treating you well. Can't believe you're 20 now – happy birthday! I genuinely wish you all the best. Just dont try anything stupid, longevity is the key, after all.
+                <p>Hey there! It's been a while, and I hope life is treating you well. Can't believe you're 20 now –
+                    happy birthday! I genuinely wish you all the best. Just don't try anything stupid, longevity is the
+                    key, after all.
 
+                    No matter where you are or what you're up to, you'll always be remembered by me as a good person,
+                    more like a homie than just an ex, you're a crazy mf..fell down from the fucking train and then
+                    wins some college events the very next week - You Are Crazy, I'd have rested for at least a month.
+                    Keep going bro, thing's most special about you is the pace u live and how intense you put ur mind
+                    into it. You got that special gift and just keep going, Keep that momentum going, the world will
+                    adjust for you.
 
-    No matter where you are or what you're up to, you'll always be remembered by me as a good person, more like a homie than just an ex, you're a crazy mf..fell down from the fucking train and then wins some college events the very next week - You Are Crazy, I'd have rested for atleast a month. Keep going bro, thing's most special about you is the pace u live and how intense you put ur mind into it. You got that special gift and just keep going, Keep that momentum going, the world will adjust for you.
-    
-    
-    Well well.......mff I would give u a bigg slapp(jk) and then and a few big hugs for going on a god mode of not talking anymore. You're like a grumpy cat sometimes, but that's part of your charm.
-    
-    
-    It's been only few months now but ig it's gon be more months and years going forward. But yea you my homie for life, IDC if you with some new nigga or old nigga, it ain't even about that- yourre my mfng homie !!
-    
-    And by the way, I got two hamsters recently – they're as precious and cute as you are. Aight get outta here now</p>
-                    <!-- ... (existing paragraphs) ... -->
-                </p>
+                    Well well.......mff I would give u a bigg slapp(jk) and then and a few big hugs for going on a god
+                    mode of not talking anymore. You're like a grumpy cat sometimes, but that's part of your charm.
+
+                    It's been only few months now but ig it's gon be more months and years going forward. But yea youre my
+                    homie for life
+
+                    And by the way, I got two hamsters recently – they're as precious and cute as you are. Aight get
+                    outta here now</p>
+                <!-- ... (existing paragraphs) ... -->
             </div>
         </div>
     </div>
-
-    <!-- Container for the bottom buttons with added Bootstrap utility classes -->
-    <div class="container-fluid bottom-container d-flex justify-content-between align-items-center">
-        <!-- Back button -->
-        <button onclick="back()" class="btn btn-secondary">Back</button>
-    
-        <!-- Button 2 -->
-        <button onclick="next()" class="btn btn-primary">And</button>
-    </div>
-    
 
     <!-- Centered container for the images -->
     <div class="center-container">
@@ -95,9 +96,33 @@
         <img class="hiddenImage" src="seven.jpg" alt="Image 7">
     </div>
 
+    <!-- Container for the bottom buttons with added Bootstrap utility classes -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-left">
+                <!-- Back button -->
+                <button onclick="back()" class="btn btn-secondary">Back</button>
+            </div>
+            <div class="col text-center">
+                <button onclick="rate()" class="btn btn-primary">Rating</button>
+            </div>
+            <div class="col text-right">
+                <!-- Move Next button to the right side -->
+                <button onclick="next()" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <div></div>
+
     <script>
         let images = document.querySelectorAll('.hiddenImage');
         let currentImageIndex = 0;
+
+        function rate() {
+            window.location.href = "table.html";
+        }
 
         function back() {
             window.location.href = 'index.html';
@@ -106,6 +131,7 @@
         function next() {
             window.location.href = 'yes2.html';
         }
+
         function showImage() {
             // Show the current image
             images[currentImageIndex].style.display = 'block';
@@ -127,8 +153,20 @@
 
         // Set a timeout to call the showImage function after 15 seconds
         setTimeout(showImage, 15000);
+
+        // Show bottom container when scrolled to the bottom
+        window.addEventListener('scroll', function () {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                document.querySelector('.bottom-container').style.display = 'flex';
+            } else {
+                document.querySelector('.bottom-container').style.display = 'none';
+            }
+        });
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
