@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
+
+        /* Add styles for the image, set initial display to none */
+        .hiddenImage {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Center the image using flexbox */
+        .center-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Style for the container holding the paragraphs */
+        .paragraph-container {
+            background-color: #ffffff;
+            /* Box background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            /* Add some margin */
+            color: black;
+            /* Set font color to black */
+        }
+    </style>
+</head>
+<body class="d-flex flex-column justify-content-between">
+    <div class="container mt-4 pt-4 flex-grow-1">
+        <div class="text-center">
+            <h1>jujujuu <span style="color: lightpink;">&#x1F49C;</h1>
+
+            <!-- Box for the paragraphs -->
+            <div class="paragraph-container">
+                <p>ipsumIf the Wi-Fi option has disappeared on your Asus gaming laptop,If the Wi-Fi option has disappeared on your Asus gaming laptop, it can be quite frustrating, but there are several steps you can take to troubleshoot and potentially resolve the issue. Here's what you can try:
+
+                    1. Restart your laptop: Sometimes, a simple restart can resolve minor software glitches. Turn off your laptop and turn it back on to see if the Wi-Fi option reappears.
+                    
+                    2. Function key: Many laptops have a function key (usually labeled as "Fn") that can disable or enable Wi-Fi. Check your keyboard for a key that has a wireless icon or says "Wi-Fi." Press the Fn key and the corresponding key to enable Wi-Fi.
+                    
+                    3. Airplane mode: Make sure your laptop is not in Airplane mode, which disables all wireless connections, including Wi-Fi. You can toggle Airplane mode on and off in the Windows settings.
+                    
+                    4. Update drivers: Outdated or corrupt network drivers can cause Wi-Fi issues. Go to the Asus website and download the latest Wi-Fi and network drivers for your laptop model. Install them and restart your laptop.
+                    
+                    5. Device Manager: Open the Device Manager and check if the network adapter is listed and enabled. If you see any yellow triangles or exclamation marks next to the network adapter, there might be a driver issue. Right-click the network adapter and select "Update driver."
+                    
+                    6. Network troubleshooter: Windows has a built-in network troubleshooter that can automatically diagnose and fix common Wi-Fi problems. Search for "Troubleshoot" in the Windows search bar, select "Internet Connections," and follow the prompts.
+                    
+                    7. System Restore: If you recently installed new software or drivers that may have caused the issue, you can perform a system restore to a point when your Wi-Fi was working correctly.
+                    
+                    8. BIOS settings: It's possible that the Wi-Fi module is disabled in the BIOS. Access the BIOS during startup (usually by pressing a key like F2 or Delete), and check the settings related to wireless or networking. Ensure that the Wi-Fi adapter is enabled.
+                    
+                    9. Reset network settings: In Windows 10 or 11, you can reset your network settings to their default values. To do this, go to Settings > Network & Internet > Status > Network reset, and follow the instructions.
+                    
+                    10. Malware scan: Perform a full system scan using your installed antivirus or antimalware software to ensure that a malware infection is not causing the issue.
+                    
+                    11. Hardware check: If none of the above steps resolve the problem, there may be a hardware issue with the Wi-Fi card or antenna. In this case, you may need to contact Asus support or a technician for further assistance.
+                    
+                    If your Wi-Fi option still doesn't reappear after trying these steps, it's a good idea to contact Asus customer support for additional help and to explore potential warranty or repair options if it's a hardware issue. it can be quite frustrating, but there are several steps you can take to troubleshoot and potentially resolve the issue. Here's what you can try:
+                    <!-- ... (existing paragraphs) ... -->
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid fixed-bottom d-flex justify-content-between">
+        <button onclick="back()" class="btn btn-secondary mt-auto">Back</button>
+        <button onclick="back1()" class="btn" style="background-color: #ff4d88; color: white;">And</button>
+
+    </div>
+    
+
+    <!-- Centered container for the images -->
+    <div class="center-container">
+        <!-- Add image elements with class "hiddenImage" and different sources -->
+        <img class="hiddenImage" src="eight.jpg" alt="Image 1">
+        <img class="hiddenImage" src="nine.jpg" alt="Image 2">
+        <img class="hiddenImage" src="ten.jpg" alt="Image 3">
+        <img class="hiddenImage" src="eleven.jpg" alt="Image 4">
+        <img class="hiddenImage" src="thirteen.jpg" alt="Image 5">
+        <img class="hiddenImage" src="twelve.jpg" alt="Image 6">
+        <img class="hiddenImage" src="fourteen.jpg" alt="Image 7">
+    </div>
+
+    <script>
+        let images = document.querySelectorAll('.hiddenImage');
+        let currentImageIndex = 0;
+
+        function back() {
+            window.location.href = 'index.html';
+        }
+
+        function back1() {
+            window.location.href = 'and.html';
+        }
+
+        function showImage() {
+            // Show the current image
+            images[currentImageIndex].style.display = 'block';
+
+            // Set a timeout to hide the image after 5 seconds
+            setTimeout(hideImage, 5000);
+        }
+
+        function hideImage() {
+            // Hide the current image
+            images[currentImageIndex].style.display = 'none';
+
+            // Increment the index for the next image
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+
+            // Call the showImage function for the next image
+            setTimeout(showImage, 15000);
+        }
+
+        // Set a timeout to call the showImage function after 15 seconds
+        setTimeout(showImage, 15000);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

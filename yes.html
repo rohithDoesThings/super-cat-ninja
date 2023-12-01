@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
+
+        /* Add styles for the image, set initial display to none */
+        .hiddenImage {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Center the image using flexbox */
+        .center-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Style for the container holding the paragraphs */
+        .paragraph-container {
+            background-color: #ffffff;
+            /* Box background color */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            /* Add some margin */
+            color: black;
+            /* Set font color to black */
+        }
+
+        /* Style for the bottom fixed container */
+        .bottom-container {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column justify-content-between">
+    <div class="container mt-4 pt-4 flex-grow-1">
+        <div class="text-center">
+            <h1>Happy 20th Birthday <span style="color: darkblue;">&#x1F499;</h1>
+
+            <!-- Box for the paragraphs -->
+            <div class="paragraph-container">
+                <p>ipsumIf the Wi-Fi option has disappeared on your Asus gaming laptop,If the Wi-Fi option has disappeared on your Asus gaming laptop, it can be quite frustrating, but there are several steps you can take to troubleshoot and potentially resolve the issue. Here's what you can try:
+
+                    <!-- ... (existing paragraphs) ... -->
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container for the bottom buttons with added Bootstrap utility classes -->
+    <div class="container-fluid bottom-container d-flex justify-content-between align-items-center">
+        <!-- Back button -->
+        <button onclick="back()" class="btn btn-secondary">Back</button>
+    
+        <!-- Button 2 -->
+        <button onclick="next()" class="btn btn-primary">And</button>
+    </div>
+    
+
+    <!-- Centered container for the images -->
+    <div class="center-container">
+        <img class="hiddenImage" src="one.jpg" alt="Image 1">
+        <img class="hiddenImage" src="two.jpg" alt="Image 2">
+        <img class="hiddenImage" src="three.jpg" alt="Image 3">
+        <img class="hiddenImage" src="four.jpg" alt="Image 4">
+        <img class="hiddenImage" src="five.jpg" alt="Image 5">
+        <img class="hiddenImage" src="six.jpg" alt="Image 6">
+        <img class="hiddenImage" src="seven.jpg" alt="Image 7">
+    </div>
+
+    <script>
+        let images = document.querySelectorAll('.hiddenImage');
+        let currentImageIndex = 0;
+
+        function back() {
+            window.location.href = 'index.html';
+        }
+
+        function next() {
+            window.location.href = 'yes2.html';
+        }
+        function showImage() {
+            // Show the current image
+            images[currentImageIndex].style.display = 'block';
+
+            // Set a timeout to hide the image after 5 seconds
+            setTimeout(hideImage, 5000);
+        }
+
+        function hideImage() {
+            // Hide the current image
+            images[currentImageIndex].style.display = 'none';
+
+            // Increment the index for the next image
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+
+            // Call the showImage function for the next image
+            setTimeout(showImage, 15000);
+        }
+
+        // Set a timeout to call the showImage function after 15 seconds
+        setTimeout(showImage, 15000);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
