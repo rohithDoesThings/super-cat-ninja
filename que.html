@@ -11,7 +11,7 @@
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
-            background: url('main.jpg') center/cover no-repeat; /* Set the background image */
+            background: url('inde.jpg') center/cover no-repeat; /* Set the background image */
             color: white;
         }
 
@@ -20,7 +20,7 @@
             padding: 20px;
             border: 1px solid #d6d8db;
             border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            background-color: rgba(255, 255, 255, 0.5); /* 0.5 for 50% transparency */
             margin: auto; /* Center the container horizontally */
             margin-bottom: 20px; /* Add margin at the bottom */
         }
@@ -44,28 +44,40 @@
 </head>
 <body>
     <div class="question-container">
-        <h1 class="text-center mb-4" style="font-family: Arial, sans-serif;">Question</h1>
+        <h1 class="text-center mb-4" style="font-family: Arial, sans-serif;">Happy birthday &#x1F604; &#x1F90D;</h1>
 
-        <h5 style="color: black;">What's your mood Rn?</h5>
+        <h5 style="color: black;"> Hey there! Not sure if you're still the same person I once knew or if life has taken you in a completely different direction. If you've become a whole new person, that's awesome, and you might wanna click on "new catto." Or if there's any part of you that still remains from how I remembered you, then 'sona aint ded MF' is more your vibe.</h5>
         <div class="text-center">
-            <button onclick="yes()" class="btn btn-primary btn-yes">Grumpy</button>
-            <button onclick="no()" class="btn btn-primary btn-yes" style="background-color: #ff4d88; color: white;">Hyper</button>
+            <button onclick="yes()" class="btn btn-primary btn-yes">new catto</button>
+            <button onclick="no()" class="btn btn-primary btn-yes" style="background-color: #ff4d88; color: white;">Sona aint dead MF</button>
+        </div>
+        <div class="footer">
+            <h6 style="font-family: 'Your Chosen Font', sans-serif;">09-12-23 &#x1F90D;</h6>
         </div>
     </div>
 
-    <div class="footer">
-        <!-- <h6 style="font-family: 'Your Chosen Font', sans-serif;">09-12-23 &#x1F90D;</h6> -->
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-left">
+                <!-- Back button -->
+                <button onclick="back()" class="btn btn-secondary">Back</button>
+            </div>
+          
+        </div>
     </div>
-
     <script>
         function yes() {
             // Redirect to yes.html
+            window.location.href = 'yes.html';
+        }
+        function back() {
+            // Redirect to yes.html
             window.location.href = 'que3.html';
         }
-
         function no() {
             // Redirect to no.html
-            window.location.href = 'que2.html';
+            window.location.href = 'no.html';
         }
     </script>
 
