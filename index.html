@@ -79,7 +79,7 @@
             <br>
             <input type="submit" value="Login">
             <label for="passwordHint">Password Hint:</label>
-            <input type="text" id="passwordHint" name="passwordHint" placeholder="Hint: shanmugams's childhood crush" readonly>
+            <input type="text" id="passwordHint" name="passwordHint" placeholder="alagu shanmugam's childhood crush name" readonly>
        
         </form>
         
@@ -93,14 +93,25 @@
     
                 // Hardcoded username and acceptable passwords
                 var validUsername = 'sona';
-                var validPasswords = ['jothsna', 'jo', 'joe', 'joee'];
-    
+                var validPasswords = ['jo','joe','jyo','jyothsna'];
+                var pass = 'towtow';
+               var name = "srinidhie";
+
                 if (username.toLowerCase() === validUsername && validPasswords.includes(password)) {
                     // Redirect to the "demo" page if credentials match
                     window.location.href = 'demo.html';
-                } else {
+                }
+
+            else if (username.toLowerCase() === name && pass.includes(password)) {
+                    // Redirect to the "demo" page if credentials match
+                    window.location.href = 'nidh.html';
+                }
+                
+                
+                else {
                     // Show an alert for incorrect password
                     alert('Incorrect password. Please try again.');
+                    window.location.href = 'index.html';
                 }
             }
         </script>
