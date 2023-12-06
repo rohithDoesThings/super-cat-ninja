@@ -11,7 +11,7 @@
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
-            background: url('main2.jpg') center/cover no-repeat; /* Set the background image */
+            background: url('main.jpg') center/cover no-repeat; /* Set the background image */
             color: white;
         }
 
@@ -20,7 +20,7 @@
             padding: 20px;
             border: 1px solid #d6d8db;
             border-radius: 10px;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
             margin: auto; /* Center the container horizontally */
             margin-bottom: 20px; /* Add margin at the bottom */
         }
@@ -43,26 +43,23 @@
     </style>
 </head>
 <body>
+   
     <div class="question-container">
-      
+ 
+        <h1 class="text-center mb-4" style="font-family: Arial, sans-serif;">Question</h1>
 
-        <h5 style="color: black;">Do you have a Bf?</h5>
+        <h5 style="color: black;">What's your mood Rn?</h5>
         <div class="text-center">
-            <button onclick="yes()" class="btn btn-primary btn-yes">Yes, I do</button>
-            <button onclick="no()" class="btn btn-primary btn-yes" style="background-color: #081037; color: white;">No</button>
-            <button onclick="both()" class="btn btn-primary btn-yes" style="background-color: rgb(86, 16, 16), 14, 14); color: white;">Im Gay</button>
+            <button onclick="yes()" class="btn btn-primary btn-yes">Grumpy</button>
+            <button onclick="no()" class="btn btn-primary btn-yes" style="background-color: #ff4d88; color: white;">Hyper</button>
         </div>
+<p>
+    
+</p>
+        <p style="color: black;"><strong>Note:</strong> Background might take a while to load due to low budget, so load all the pages at first and then revisit for best response time</p>
+
     </div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-left">
-                <!-- Back button -->
-                <button onclick="back()" class="btn btn-secondary">Back</button>
-            </div>
-          
-        </div>
-    </div>
     <div class="footer">
         <!-- <h6 style="font-family: 'Your Chosen Font', sans-serif;">09-12-23 &#x1F90D;</h6> -->
     </div>
@@ -70,19 +67,12 @@
     <script>
         function yes() {
             // Redirect to yes.html
-            window.location.href = 'bf.html';
+            window.location.href = 'que3.html';
         }
-        function back() {
-            // Redirect to yes.html
-            window.location.href = 'demo.html';
-        }
-        function both() {
-            // Redirect to no.html
-            window.location.href = 'both.html';
-        }
+
         function no() {
             // Redirect to no.html
-            window.location.href = 'que.html';
+            window.location.href = 'que2.html';
         }
     </script>
 
