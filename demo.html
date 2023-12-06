@@ -63,11 +63,23 @@
     <div class="footer">
         <!-- <h6 style="font-family: 'Your Chosen Font', sans-serif;">09-12-23 &#x1F90D;</h6> -->
     </div>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-left">
+                <!-- Back button -->
+                <button onclick="back()" class="btn btn-secondary">Back</button>
+            </div>
+          
+        </div>
     <script>
         function yes() {
             // Redirect to yes.html
             window.location.href = 'que3.html';
+        }
+
+        function back() {
+            // Redirect to yes.html
+            window.location.href = 'index.html';
         }
 
         function no() {
